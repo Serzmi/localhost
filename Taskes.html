@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="np"></div>
+    <form>
+        <div class="left_pan">
+            <div class="poisk" id="poiskovik">
+                <input type="search" placeholder="Поиск">
+                <input type="submit" value="Найти">
+                <input type="checkbox" id="side-checkbox"/>
+
+                <div class="side-panel">
+                    <label class="side-button-2" for="side-checkbox">+</label>    
+                    <div class="side-title">Меню:</div>
+                        <li><a href="#glav"><font color="white">Главная</font></a></li>
+                        <li><a href="#osits"><font color="white">Контакты</font></a></li>
+                        <li><a href="regist.html"><font color="white">Регестрация</font></a></li>
+                        <li><a href="sigin.html"><font color="white">Вход</font></a></li>
+                        <li><a href="#osits"><font color="white">О сайте</font></a></li>
+                        
+                    <div class="np"></div><hr>
+
+                    <p>
+                        <font color="white">Цвет: </font>
+                        <input class="politra" type="color" id="col" list="color">
+                        <datalist id="color"> 
+                        <option value = "#ff0000" label="red">
+                        </datalist>
+                        <button class="btn" type ="button" onclick = nigcht()>OK</button>
+                    </p>
+                    <p>
+                        <font color="white">Размер шрифта:</font><br>
+                        <button id = "men" class="btn" type ="button" onclick = sizem()>меньше</button>
+                        <button id = "bol" class="btn" type ="button" onclick = sizeb()>больше</button><br>
+                        <button id = "df" class="btn" type ="button" onclick = def()>Стандартный размер</button><br>
+                        <font color="white">Прозначность:</font><br>
+                        <input id="opas" type="range" min="0" max="1" step="0.1" value ="1">
+                        <button class="btn" type ="button" onclick = "ops_2()">OK</button><br>
+                        <font color="white">Стили:</font><br>
+                        <button id = "ss1" class="btn" type ="button" onclick = stylesg() >/</button>
+                        <button id = "ss2" class="btn" type ="button" onclick = stylesr() >/</button>
+                        <button id = "ss3" class="btn" type ="button" onclick = stylesb() >/</button><br>
+                        <button id = "ss4" class="btn" type ="button" onclick = standarts()>Стандартный</button><br><hr>
+                    </p>  
+                    <p>
+                        <input type="submit" value="Выйти из аккаунта" class="exit">
+                    </p>  
+                </div>
+            
+            <div class="side-button-1-wr">
+                <label class="side-button-1" for="side-checkbox">
+                    <div class="side-b side-open">Меню</div>
+                    <div class="side-b side-close">Закрыть</div>
+                </label>
+            </div>
+            <div id="info_user" >
+                <hr color="black" width="150px">
+                <p>Введите почту: </p>
+                <input id = "email" type = "email" name = "auth_email" placeholder="@mail.com" required>
+                <p>Введите номер телефона:</p>
+                <input id = "namber" type = "namber" name = "auth_namber" placeholder="+7" required>
+                <p><button class="btncl" type ="button" onclick = nigcht()>OK</button></p>
+                <p><sup>*это нужно для получения уведомлений</sup></p>
+            </div>
+        </div>
+    </form>
+
+    <div class="panel_1" id="pan">
+        <div class="title">
+            <p><h2><font color="white">Задания.</font></h2></p>
+        </div>
+        <div id="pan_infos" class="pan_infos" >
+        <div id="glav" class="txt">
+           
+        <button class="btn" type ="button" onclick = pr()>Найти</button><br><hr>
+        </p>
+        <button id = "cl" class="btn" type ="button" onclick = rgb()>Цвета</button><br><hr>
+        <p>Дан массив [-1, 2, 5, -6, 0, 7, "Иван", "Марья"].<br>Вывести положителные числа этого массива.</p>
+        <p id="otv"></p><hr>
+
+        <form>
+            <p><h3>//Небольшой опрос</h3></p>
+            <p>
+                Какие языки ты знаешь?<br>
+                <input type="checkbox" name="lang" value="1C"/>1C<br>
+                <input type="checkbox" name="lang" value="1C"/>Python<br>
+                <input type="checkbox" name="lang" value="1C"/>C#<br>
+                <input type="checkbox" name="lang" value="1C"/>PHP<br>
+                <input type="submit" value="отправить">
+            </p>
+        </form>
+        <br>
+        <hr>
+
+        <p>Какой знаешь язык лучше всего?</p>
+        <form method ="POST">
+            <select name = "lang" size="1">
+                <option value="C++">C++<option>
+                <option value="PHP">PHP<option>
+                <option value="HTML">HTML<option>
+            </select>
+            <input type="submit" value="отправить">
+        </form>
+        <br>
+        <hr>
+
+        <p>Какие хочешь выучить?</p>
+        <form method ="POST">
+            <select name = "lang[]" size="2" multiple="multiple">
+                <option value="C++">C++</option>
+                <option value="PHP">PHP</option>
+                <option value="HTML">HTML</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+            </select>
+            <input type="submit" value="отправить">
+        </form>
+        <br>
+        <hr>
+
+        <p>
+        <button id = "btn" class="btn" type ="button" onclick = sm()>Вычеслить</button>
+        <button id = "btn" class="btn" type ="button" onclick = ran()>Вывести рандомное число</button><br>
+        </p>
+        <hr>
+
+        <p>Введите степень: </p>
+        <input id = "stepen" type = "ctepen" name = "auth_ctepen" placeholder="степень" required><br>
+        <p>Введите число: </p>
+        <input id = "cheslo" type = "cheslo" name = "auth_cheslo" placeholder="число" required><br>
+        <br>        <button id = "btn" class="btn" type ="button" onclick = rk_out()>Возведение в степень</button>
+        <p>*через рекурсию</p><br>
+        <hr>
+
+        <p><h3>Мои соц. сети:</h3></p>
+        <p>
+            <a href="https://vk.com/serzmi"><img src="/image/vk.png" width="50" 
+            height="50"></a>
+            <a href="https://www.instagram.com/"><img src="/image/inst.png" width="55" 
+            height="50"></a>
+            <a href="https://web.telegram.org/k/"><img src="/image/tg.jpg" width="55" 
+            height="50"></a>
+        </p>
+        </div>
+        <br>
+        </div>
+
+        <hr>
+        <div>
+            <p id="osits" class="eding">
+                <h5><sup>Учебная практика ИСИП 20.20</sup></h5>
+                <h5><sup>Алехин Сергей</sup></h5>
+                <a href = '#top'>На верх</a>
+            </p>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html

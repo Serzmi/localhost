@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="np"></div>
+
+    <form>
+        <div class="poisk" id="poiskovik">
+        <input type="search">
+        <input type="submit" value="Найти">
+        <ul class="nav">
+            <li><a href="#glav"><font color="white">Главная</font></a></li>
+            <li><a href="#osits"><font color="white">Контакты</font></a></li>
+            <li><a href="#osits"><font color="white">О сайте</font></a></li>
+        </ul>
+        <p>
+            <font color="white">Цвет: </font>
+            <input class="politra" type="color" id="col" list="color">
+            <datalist id="color"> 
+                <option value = "#ff0000" label="red">
+            </datalist>
+            <button class="btn" type ="button" onclick = nigcht()>OK</button>
+        </p>
+        <hr color="black" width="150px">
+        <p>Введите почту: </p>
+        <input id = "email" type = "email" name = "auth_email" placeholder="@mail.com" required>
+        <p>Введите номер телефона:</p>
+        <input id = "namber" type = "namber" name = "auth_namber" placeholder="+7" required>
+        <p><button class="btncl" type ="button" onclick = nigcht()>OK</button></p>
+        <p><sup>*это нужно для получения уведомлений</sup></p>
+        <p>
+            <font color="white">Размер шрифта:</font><br>
+            <button id = "men" class="btn" type ="button" onclick = sizem()>меньше</button>
+            <button id = "bol" class="btn" type ="button" onclick = sizeb()>больше</button><br>
+            <button id = "df" class="btn" type ="button" onclick = def()>Стандартный размер</button><br>
+            <font color="white">Стили:</font><br>
+            <button id = "ss1" class="btn" type ="button" onclick = stylesg() >/</button>
+            <button id = "ss2" class="btn" type ="button" onclick = stylesr() >/</button>
+            <button id = "ss3" class="btn" type ="button" onclick = stylesb() >/</button><br>
+            <button id = "ss4" class="btn" type ="button" onclick = standarts()>Стандартный</button>
+            
+        </p>
+        </div>
+    </form>
+
+    <form>
+        <div class="reg" id="registr">
+        <p>Ваш логин:</p>
+        <input id = "1" type = "login" name = "auth_login" placeholder="Логин" required>
+        <p>Ваш пароль:</p>
+        <input id = "2" type = "pass" name = "auth_pass" placeholder="Пароль" required>
+        <br>
+        
+        <button type="reset" onclick = >Отмена</button>
+        <button type ="button" onclick = checkUser()>OK</button>
+
+        </div>
+    </form>
+    <div class="panel" id="pan">
+        <div class="title">
+            <p><h2><font color="white">Привет, вот немного о моём лете.</font></h2></p>
+        </div>
+        
+        
+        <div id="glav" class="txt">
+            <p>
+                <img class="img" src="/image/foto.PNG">
+                <span>21.07.2023</span><br>
+                Это я отдыхаю в Крыму. Я плавал с аквалангов и видел много красивых рыб, а так же водных растений. 
+            </p>
+        </div>
+        <br>
+        <hr>
+        <div class="txt">
+            <p>
+                <img class="img" src="/image/foto2.PNG">
+                <span>16.08.2023</span><br>
+                В конце лета я с друзьями поехал в палаточный лагерь. Мы были на берегу озура в Демьянске. Там было очень красиво.
+            </p>
+        </div>
+        <br>
+        <hr>
+
+        <div class="txt">
+            <p>
+                <img class="img" src="/image/foto3.PNG">
+                <span>25.08.2023</span><br>
+                После лагеря мы решили сьездить на карьер. Теперь это моё самое любимое место там очень красиво и очень чистая вода. Плавать там одно удавольствие.
+            </p>
+        </div>
+        <br>
+        <hr>
+        <!-- <details>
+            <summary>
+                Мои хобби;)
+            </summary>
+            <ul>
+                <li>Волейбоил</li>
+                <li>Путишествия</li>
+                <li>Футбо</li>
+            </ul>
+        </details> -->
+        <!-- <p> -->
+        <!-- <input id = "poisk" type = "poisk" name = "auth_naiti" placeholder="Что найти?" required> -->
+        <!-- <button class="btn" type ="button" onclick = pr()>Найти</button><br>
+        </p>
+        <button id = "cl" class="btn" type ="button" onclick = rgb()>Цвета</button><br>
+        <p>Дан массив [-1, 2, 5, -6, 0, 7, "Иван", "Марья"].<br>Вывести положителные числа этого массива.</p>
+        <p id="otv"></p> -->
+        <p>
+        <button id = "btn" class="btn" type ="button" onclick = sm()>Вычеслить</button>
+        <button id = "btn" class="btn" type ="button" onclick = ran()>Вывести рандомное число</button><br><hr>
+        </p>
+
+        <video src="/image/_import_61a85d93bd0254.08110474_FPpreview.mp4" poster="/image/poster.PNG" width="400" height="200" controls></video>
+        <br>
+        <hr>
+        <div id="contact">
+            <p><h3>Меня можно найти по адресу:</h3></p>
+            <div  class = "carta "style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/gbou_mo_kolledzh_podmoskovye_korpus_7/1010401519/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">ГБОУ МО колледж Подмосковье, корпус № 7</a><a href="https://yandex.ru/maps/21641/lobnja/category/college/184106236/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Колледж в Лобне</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.482834%2C56.006170&mode=search&oid=1010401519&ol=biz&z=16.3" width="400" height="200" frameborder="1" allowfullscreen="true" style="position:relative;">
+            </iframe></div><br>
+            <p><h3>Мои соц. сети:</h3></p>
+            <p>
+                <a href="https://vk.com/serzmi"><img src="/image/vk.png" width="50" 
+                height="50"></a>
+                <a href="https://www.instagram.com/"><img src="/image/inst.png" width="55" 
+                height="50"></a>
+                <a href="https://web.telegram.org/k/"><img src="/image/tg.jpg" width="55" 
+                height="50"></a>
+            </p>
+        </div>
+        <br>
+        <hr>
+         <!-- <figure>
+            <figcaption>Просто красиво</figcaption>
+            <img src="/2023/Sites/Site1/fotos1.PNG" alt="пузырьки" width="400" height="200">
+        </figure>    -->
+        
+        
+        <div>
+            <p id="osits" class="eding">
+                <h5><sup>Учебная практика ИСИП 20.20</sup></h5>
+                <h5><sup>Алехин Сергей</sup></h5>
+                <a href = '#top'>На верх</a>
+            </p>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html
